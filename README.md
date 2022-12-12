@@ -56,7 +56,7 @@ This is a ROS package for the Stewart-Gough platform in the National University 
 ## :pushpin:About The Project
 
 <div align="center">
-	<img src="https://user-images.githubusercontent.com/30636259/206955296-3cf4724a-e695-4bd5-bc52-adbaaf6c4481.png" alt="Logo" width="300"/>
+	<img src="https://user-images.githubusercontent.com/30636259/206955296-3cf4724a-e695-4bd5-bc52-adbaaf6c4481.png" alt="Logo" width="400"/>
 </div>
 
 
@@ -65,8 +65,8 @@ This repo contains the development of all the packages used to control and simul
 ### Kinematics
 
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/30636259/184457385-48dfaee1-d26d-42e6-bbcc-ebc374226547.svg#gh-light-mode-only" width="300" />
-    <img src="https://user-images.githubusercontent.com/30636259/184457633-e413ec9f-0fb0-4d23-bd3f-1d5ddb984f5f.svg#gh-dark-mode-only" width="300" />
+    <img src="https://user-images.githubusercontent.com/30636259/184457385-48dfaee1-d26d-42e6-bbcc-ebc374226547.svg#gh-light-mode-only" width="250" />
+    <img src="https://user-images.githubusercontent.com/30636259/184457633-e413ec9f-0fb0-4d23-bd3f-1d5ddb984f5f.svg#gh-dark-mode-only" width="250" />
 </div>
 
 
@@ -100,6 +100,7 @@ $$
 https://github.com/Ileriayo/markdown-badges -->
 ### Built With
 * [![ROS](https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white)](ros.org)
+* ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 <div align="right">
 
