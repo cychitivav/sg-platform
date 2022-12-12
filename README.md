@@ -7,26 +7,26 @@ EMOJIS
 * https://gist.github.com/rxaviers/7360908
   
 Find and replace the following text with the name of the project:
-	repo_name
+	sg_platform
 -->
 
 <div align="center" id="readme-top">
 
-<img src="https://user-images.githubusercontent.com/30636259/167962176-b8172b07-c769-4a7b-1690-db518c59fffa.png" alt="Logo" width="80"/>
+<!-- <img src="https://user-images.githubusercontent.com/30636259/206955296-3cf4724a-e695-4bd5-bc52-adbaaf6c4481.png" alt="Logo" width="300"/> -->
 
 <!-- omit in toc -->
-# README title
-An awesome README description!
+# Stewart-Gough platform ROS package
+This is a ROS package for the Stewart-Gough platform in the National University of Colombia. 
 
-[**Explore the docs »**](https://github.com/cychitivav/repo_name/wiki)
+[**Explore the docs »**](https://github.com/cychitivav/sg_platform/wiki)
 
-[View Demo](https://github.com/cychitivav/repo_name) · [Report Bug](https://github.com/cychitivav/repo_name/issues) · [Request Feature](https://github.com/cychitivav/repo_name/issues)
+[View Demo](https://github.com/cychitivav/sg_platform) · [Report Bug](https://github.com/cychitivav/sg_platform/issues) · [Request Feature](https://github.com/cychitivav/sg_platform/issues)
 
-[![Contributors](https://img.shields.io/github/contributors/cychitivav/repo_name.svg?style=for-the-badge)](https://github.com/cychitivav/repo_name/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/cychitivav/repo_name.svg?style=for-the-badge)](https://github.com/cychitivav/repo_name/network/members)
-[![Stargazers](https://img.shields.io/github/stars/cychitivav/repo_name.svg?style=for-the-badge)](https://github.com/cychitivav/repo_name/stargazers)
-[![Issues](https://img.shields.io/github/issues/cychitivav/repo_name.svg?style=for-the-badge)](https://github.com/cychitivav/repo_name/issues)
-[![MIT License](https://img.shields.io/github/license/cychitivav/repo_name.svg?style=for-the-badge)](https://github.com/cychitivav/repo_name/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/cychitivav/sg_platform.svg?style=for-the-badge)](https://github.com/cychitivav/sg_platform/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/cychitivav/sg_platform.svg?style=for-the-badge)](https://github.com/cychitivav/sg_platform/network/members)
+[![Stargazers](https://img.shields.io/github/stars/cychitivav/sg_platform.svg?style=for-the-badge)](https://github.com/cychitivav/sg_platform/stargazers)
+[![Issues](https://img.shields.io/github/issues/cychitivav/sg_platform.svg?style=for-the-badge)](https://github.com/cychitivav/sg_platform/issues)
+[![MIT License](https://img.shields.io/github/license/cychitivav/sg_platform.svg?style=for-the-badge)](https://github.com/cychitivav/sg_platform/blob/main/LICENSE)
 
 
 </div>
@@ -36,6 +36,9 @@ An awesome README description!
 <!-- omit in toc -->
 ## :pencil:Table of contents
 - [:pushpin:About The Project](#pushpinabout-the-project)
+	- [Kinematics](#kinematics)
+		- [Inverse kinematics](#inverse-kinematics)
+		- [Forward kinematics](#forward-kinematics)
 	- [Built With](#built-with)
 - [:checkered\_flag:Getting Started](#checkered_flaggetting-started)
 	- [Prerequisites](#prerequisites)
@@ -52,9 +55,39 @@ An awesome README description!
 <!-- ABOUT THE PROJECT -->
 ## :pushpin:About The Project
 
-[![Product Name Screen Shot](https://user-images.githubusercontent.com/30635659/169600958-763d1628-b7bb-475c-a8bc-56120d1d3ff9.svg)](https://user-images.githubusercontent.com/30635659/169600958-763d1628-b7bb-475c-a8bc-56120d1d3ff9.svg)
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/30636259/206955296-3cf4724a-e695-4bd5-bc52-adbaaf6c4481.png" alt="Logo" width="300"/>
+</div>
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor `repo_name`
+
+This repo contains the development of all the packages used to control and simulate the movement of the Stewart-Gough platform at the Universidad Nacional de Colombia.
+
+### Kinematics
+
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/30636259/184457385-48dfaee1-d26d-42e6-bbcc-ebc374226547.svg#gh-light-mode-only" width="300" />
+    <img src="https://user-images.githubusercontent.com/30636259/184457633-e413ec9f-0fb0-4d23-bd3f-1d5ddb984f5f.svg#gh-dark-mode-only" width="300" />
+</div>
+
+
+#### Inverse kinematics
+The inverse kinematics of the Stewart-Gough platform is given by the following equations:
+
+$$
+\begin{align*}
+    d_i &= \lVert b_i^0 - a_i^0 \rVert\\
+    d_i &= \lVert T_1^0b_i^1 - a_i^0 \rVert\\
+    d_i &= \lVert R_1^0b_i^1 + P - a_i^0 \rVert\\
+    d_i &= \sqrt{[R_1^0b_i^1 + P - a_i^0]^T\cdot[R_1^0b_i^1 + P - a_i^0]}
+\end{align*}
+$$
+
+
+#### Forward kinematics
+
+
+
+
 
 <div align="right">
 
@@ -93,7 +126,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
 	```sh
-	git clone https://github.com/cychitivav/repo_name.git
+	git clone https://github.com/cychitivav/sg_platform.git
 	```
 2. Next steps
 
@@ -102,7 +135,7 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-> __Note__: For more examples, please refer to the* [*Documentation*](https://github.com/cychitivav/repo_name/wiki)
+> __Note__: For more examples, please refer to the* [*Documentation*](https://github.com/cychitivav/sg_platform/wiki)
 
 
 
@@ -110,11 +143,14 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- ROADMAP -->
 ## :roller_coaster:Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-    - [ ] Nested Feature
+- [ ] Kinematics
+	- [x] Inverse kinematics
+	- [ ] Forward kinematics
+	- [ ] Jacobian
+- [ ] URDF
+  - [ ] Spherical joints
 
-> __Note__: See the [open issues](https://github.com/cychitivav/repo_name/issues) for a full list of proposed features (and known issues).
+> __Note__: See the [open issues](https://github.com/cychitivav/sg_platform/issues) for a full list of proposed features (and known issues).
 
 <div align="right">
 
@@ -170,8 +206,7 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information
 <!-- ACKNOWLEDGMENTS -->
 ## :tada:Acknowledgments
 
-* []()
-* Cite[^cite]
+* [@jsduenass](https:github.com/jsduenass)
 
 
 <div align="right">
