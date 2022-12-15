@@ -1,27 +1,27 @@
 <robot name="mi_robot">
 
-    <link name="link1">
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <box size="1 1 1" />
-        </geometry>
-      </visual>
-    </link>
-  
-    <link name="link2">
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <box size="1 1 1" />
-        </geometry>
-      </visual>
-    </link>
-  
-    <joint name="mi_junta_esferica" type="continuous">
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <axis xyz="0 0 1" />
-      <parent link="link1" />
-      <child link="link2" />
-    </joint>
+	<link name="link1">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="1 1 1" />
+			</geometry>
+		</visual>
+	</link>
+
+	<link name="link2">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="1 1 1" />
+			</geometry>
+		</visual>
+	</link>
+
+	<joint name="spherical_joint" type="floating">
+		<parent link="link1" />
+		<child link="link2" />
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<axis xyz="0 0 1" />
+	</joint>
 </robot>  
