@@ -118,9 +118,38 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* numpy
-	```sh
-	pip install numpy
+* Robotics toolbox for python
+	```bash
+	pip3 install roboticstoolbox-python==1.0.3
+	```
+* Raspberry GPIO
+	```bash
+	pip3 install RPi.GPIO
+	```
+* ADS1115
+	```bash
+	pip3 install adafruit-circuitpython-ads1x15
+	```
+* I2C
+	```bash
+	sudo apt-get install -y python3-smbus
+	sudo apt-get install -y i2c-tools
+
+	# Install raspi-config - https://dexterexplains.com/r/20211030-how-to-install-raspi-config-on-ubuntu
+	wget -p -O ./raspi-config_20211019_all.deb https://archive.raspberrypi.org/debian/pool/main/r/raspi-config/raspi-config_20211019_all.deb
+	sudo apt -y install libnewt0.52 whiptail parted triggerhappy lua5.1 alsa-utils
+	sudo apt install -fy
+	sudo dpkg -i ./raspi-config_20211019_all.deb
+	rm ./raspi-config_20211019_all.deb
+
+
+	# Enable I2C - https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+	sudo raspi-config # 5 Interfacing Options > P5 I2C > Yes > Ok > Finish
+	sudo reboot
+
+	# Check I2C is enabled and connect devices to view their addresses
+	ls /dev/i2c*
+	sudo i2cdetect -y 1
 	```
 
 ### Installation
